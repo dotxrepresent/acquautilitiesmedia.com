@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#075272">
 
 <!-- SEO -->
 <meta name="description" content="Acqua Utilities Media Limited is a UK based IT consultancy specialising in energy, oil and gas, renewables and utilities. Senior programme management, business development and advisory services. Operating dot.x Representative, a brand and startup consultancy focused on the sports sector.">
@@ -243,8 +243,10 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
   footer{grid-template-columns:1fr;gap:1.25rem;padding:2rem 1.25rem;text-align:center}
   .foot-logo{justify-content:center}
   .foot-right{text-align:center}
-  .foot-links{display:grid;grid-template-columns:repeat(3,auto);gap:.5rem 1.25rem;justify-content:center}
-  .foot-links li:nth-child(7){display:none}
+  .foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.25rem;max-width:280px;margin:0 auto}
+  .foot-links li:nth-child(6),.foot-links li:nth-child(7){flex-basis:100%;display:flex;justify-content:center;gap:1.5rem}
+  .foot-links li:nth-child(6){flex-basis:auto}
+  .foot-links li:nth-child(7){flex-basis:auto}
 }
 
 /* PRIVACY MODAL */
@@ -550,7 +552,6 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://www.linkedin.com/company/acqua-utilities-media-ltd/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    <li style="color:rgba(255,255,255,.15)">|</li>
     <li><a href="#" id="privLink">Privacy</a></li>
   </ul>
   <div class="foot-right">
@@ -558,7 +559,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
     <div class="foot-dotx">Brand and startup consultancy · <a href="https://dotxrepresentative.com" target="_blank" rel="noopener noreferrer">dot.x Representative ↗</a></div>
     <div class="foot-dotx" style="margin-top:.5rem">
       <a href="https://dotxrepresentative.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.4rem;color:rgba(255,255,255,.3);text-decoration:none;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;transition:color .2s">
-        <img src="dotx-logo-circle.png" alt="dot.x" style="width:16px;height:16px;display:inline-block;">
+        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;overflow:hidden;flex-shrink:0"><img src="dotx_V1_black__1_.PNG" alt="dot.x" style="width:100%;height:100%;object-fit:cover;filter:invert(1)"></span>
         Built by dot.x
       </a>
     </div>
