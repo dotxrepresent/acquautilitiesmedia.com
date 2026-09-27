@@ -415,3 +415,10 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 
 @media(prefers-reduced-motion:reduce){.hero-media{animation:none}}
 @media(max-width:900px){.page-hero .hero-shade{background:linear-gradient(180deg,rgba(13,43,62,.9),rgba(13,43,62,.96))}}
+.svc-card{background:var(--navy)}
+.svc-card.featured{background:#123b52}
+.svc-card:hover{background:#15425b}
+@media(max-width:900px){
+  .hero-right{display:flex;min-height:230px;padding:2rem}
+  .hero-logo-display img{width:150px}
+}
