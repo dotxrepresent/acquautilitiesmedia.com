@@ -379,3 +379,13 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 .region p{font-size:.8rem;line-height:1.8;color:var(--muted);font-weight:300}
 @media(max-width:900px){.regions{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.regions{grid-template-columns:1fr}}
+
+/* TEAM PROFILES (practice pages) */
+.leads{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.lead-card{background:var(--white);border:1px solid var(--border);padding:2rem 2rem 1.75rem;display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;transition:border-color .25s}
+.lead-card:hover{border-color:var(--teal)}
+.lead-card .team-avatar{width:84px;height:84px;margin-bottom:.75rem}
+.lead-card p{font-size:.82rem;line-height:1.85;color:var(--muted);font-weight:300;margin-top:.35rem}
+.lead-card .lead-role{margin:0}
+.lead-card .card-link{margin-top:.6rem;padding-top:0}
+@media(max-width:800px){.leads{grid-template-columns:1fr}.lead-card{padding:1.75rem 1.5rem}}
