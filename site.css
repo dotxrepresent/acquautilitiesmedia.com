@@ -422,3 +422,10 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
   .hero-right{display:flex;min-height:230px;padding:2rem}
   .hero-logo-display img{width:150px}
 }
+
+/* FORM VERIFICATION */
+.f-verify{padding:.95rem 1.25rem;border-bottom:1px solid var(--border);background:var(--white)}
+.f-verify label{display:flex;gap:.7rem;align-items:flex-start;font-size:.74rem;line-height:1.65;color:var(--muted);font-weight:300;cursor:pointer}
+.f-verify input{width:16px;height:16px;margin-top:.15rem;flex-shrink:0;accent-color:var(--teal);cursor:pointer}
+.f-verify a{color:var(--teal)}
+.f-hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}

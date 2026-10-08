@@ -18,15 +18,19 @@
 (function(){
   const form=document.getElementById('cForm'),succ=document.getElementById('fSuccess');
   if(!form)return;
+  const started=Date.now();
   form.addEventListener('submit',async e=>{
     e.preventDefault();
     const btn=form.querySelector('button[type="submit"]');
+    /* bot protection: hidden honeypot field and a minimum time on page */
+    const hp=form.querySelector('input[name="_gotcha"]');
+    if((hp&&hp.value)||Date.now()-started<3000){form.style.display='none';succ.style.display='block';return}
     btn.disabled=true;btn.textContent='Sending…';
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
       if(res.ok){form.style.display='none';succ.style.display='block'}
-      else{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Something went wrong. Please email acquautilitiesmedia@outlook.com')}
-    }catch{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Something went wrong. Please email acquautilitiesmedia@outlook.com')}
+      else{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Something went wrong. Please email acquautilities@sthelier.onmicrosoft.com')}
+    }catch{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Something went wrong. Please email acquautilities@sthelier.onmicrosoft.com')}
   });
 })();
 
@@ -79,4 +83,10 @@
     if(reduce)return;
     new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!run){run=true;loop()}else if(!e.isIntersecting){run=false;cancelAnimationFrame(raf)}})).observe(cv);
   });
+})();
+
+// PRIVACY LINK INSIDE THE FORM
+(function(){
+  const mod=document.getElementById('privModal');
+  document.querySelectorAll('[data-open-privacy]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();if(mod){mod.style.display='block';document.body.style.overflow='hidden'}}));
 })();
