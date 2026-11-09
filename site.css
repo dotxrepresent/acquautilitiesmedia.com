@@ -449,3 +449,12 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 @media(prefers-reduced-motion:reduce){.ck-bar{transition:none}}
 .c-form .rc-wrap{border-bottom:1px solid var(--border);background:var(--white);color:var(--muted)}
 .c-form .rc-note a{color:var(--teal)}
+
+/* Case study image panel and platforms strip */
+.case + .case{margin-top:1.5rem}
+.case-side--image img{display:block;width:100%;height:auto;margin:0 0 1.5rem;border:1px solid rgba(255,255,255,.15)}
+.platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1.5rem}
+.plat{background:#fff;padding:1.5rem 1.6rem}
+.plat-t{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.plat p{font-size:.85rem;line-height:1.75;color:var(--muted);font-weight:300}
+@media(max-width:900px){.platforms{grid-template-columns:1fr}}
