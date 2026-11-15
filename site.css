@@ -16,7 +16,7 @@
   --mono:'DM Mono',monospace;
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;color-scheme:light}
 body{font-family:var(--sans);background:var(--white);color:var(--text);overflow-x:hidden;font-size:16px;line-height:1.6}
 
 /* NAV */
@@ -458,3 +458,18 @@ footer{background:var(--navy);padding:2rem 3rem;display:grid;grid-template-colum
 .plat-t{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
 .plat p{font-size:.85rem;line-height:1.75;color:var(--muted);font-weight:300}
 @media(max-width:900px){.platforms{grid-template-columns:1fr}}
+/* ============ iOS 27 refresh (Nov 2026): glass header, glass menu, compact cookie notice ============ */
+nav{background:rgba(255,255,255,.74) !important;-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-bottom-color:rgba(13,43,62,.08) !important}
+.mob-nav{background:rgba(255,255,255,.88) !important;-webkit-backdrop-filter:blur(28px) saturate(160%);backdrop-filter:blur(28px) saturate(160%)}
+.mob-nav.open a{opacity:0;transform:translateY(10px);animation:iosIn .45s cubic-bezier(.16,1,.3,1) forwards}
+.mob-nav.open a:nth-of-type(2){animation-delay:.04s}.mob-nav.open a:nth-of-type(3){animation-delay:.08s}.mob-nav.open a:nth-of-type(4){animation-delay:.12s}.mob-nav.open a:nth-of-type(5){animation-delay:.16s}.mob-nav.open a:nth-of-type(6){animation-delay:.2s}.mob-nav.open a:nth-of-type(7){animation-delay:.24s}.mob-nav.open a:nth-of-type(8){animation-delay:.28s}
+@keyframes iosIn{to{opacity:1;transform:none}}
+.ck-bar{background:rgba(13,43,62,.9) !important;-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-radius:14px !important;border:1px solid rgba(255,255,255,.08)}
+@media(max-width:560px){
+  .mob-nav{gap:1.6rem !important}
+  .mob-nav a{font-size:1.6rem !important}
+  .ck-bar{flex-direction:row !important;align-items:center !important;gap:.8rem !important;padding:.7rem .75rem .7rem 1rem !important;left:12px !important;right:12px !important;bottom:12px !important}
+  .ck-bar p{font-size:.68rem !important;line-height:1.45 !important}
+  .ck-bar button{width:auto !important;padding:.55rem 1rem !important;border-radius:10px !important}
+}
+@media(prefers-reduced-motion:reduce){.mob-nav.open a{animation:none;opacity:1;transform:none}}
