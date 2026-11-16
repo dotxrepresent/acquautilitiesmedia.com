@@ -473,3 +473,16 @@ nav{background:rgba(255,255,255,.74) !important;-webkit-backdrop-filter:blur(20p
   .ck-bar button{width:auto !important;padding:.55rem 1rem !important;border-radius:10px !important}
 }
 @media(prefers-reduced-motion:reduce){.mob-nav.open a{animation:none;opacity:1;transform:none}}
+
+/* Testimonials (Nov 2026) */
+.tm-wrap{margin-top:2rem;display:grid;gap:1.25rem}
+.tm-feature{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--teal);padding:2rem 2.25rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;margin:0}
+.tm-q{font-family:var(--serif);font-style:italic;color:var(--navy);line-height:1.55;margin:0}
+.tm-feature .tm-q{font-size:clamp(1.15rem,2vw,1.45rem);max-width:48ch}
+.tm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.tm{background:var(--white);border:1px solid var(--border);padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:1.25rem;margin:0}
+.tm .tm-q{font-size:1.02rem}
+.tm-who{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-top:auto}
+.tm-role{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:0;text-transform:none;color:var(--muted);margin-top:.35rem}
+@media(max-width:900px){.tm-grid{grid-template-columns:1fr 1fr}.tm-feature{grid-template-columns:1fr}}
+@media(max-width:560px){.tm-grid{grid-template-columns:1fr}.tm-feature{padding:1.6rem 1.4rem}}
