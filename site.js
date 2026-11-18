@@ -153,3 +153,13 @@
     bar.classList.remove('show');setTimeout(function(){bar.remove()},500);
   });
 })();
+
+/* identity refresh: collapse case scope lists on phones */
+(function(){
+  if(!window.matchMedia('(max-width:600px)').matches)return;
+  document.querySelectorAll('.case-side').forEach(function(s){
+    s.classList.add('closed');
+    var h=s.querySelector('.case-side-title');
+    if(h)h.addEventListener('click',function(){s.classList.toggle('closed')});
+  });
+})();
