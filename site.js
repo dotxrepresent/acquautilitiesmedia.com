@@ -3,7 +3,7 @@
   const btn=document.getElementById('hamburger'),nav=document.getElementById('mobNav'),cl=document.getElementById('mobClose');
   btn.addEventListener('click',()=>{nav.classList.add('open');document.body.style.overflow='hidden'});
   cl.addEventListener('click',()=>{nav.classList.remove('open');document.body.style.overflow=''});
-  nav.querySelectorAll('.mob-item').forEach(el=>el.addEventListener('click',()=>{nav.classList.remove('open');document.body.style.overflow=''}));
+  nav.querySelectorAll('a').forEach(el=>el.addEventListener('click',()=>{nav.classList.remove('open');document.body.style.overflow=''}));
 })();
 
 // FADE IN
