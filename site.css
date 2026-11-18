@@ -541,7 +541,7 @@ nav{background:rgba(255,255,255,.74) !important;-webkit-backdrop-filter:blur(20p
 .dd-t span{font-size:.72rem;font-weight:400;color:var(--muted)!important}
 .nav-dd-menu a.dd-foot{display:block!important;font-size:.68rem!important;font-weight:400!important;color:var(--muted)!important;padding:.8rem .9rem .6rem!important}
 .nav-dd-menu a.dd-foot:hover{color:var(--teal)!important;background:none}
-.mnav{display:none;position:fixed;inset:0;z-index:300;background:#fff;flex-direction:column;overflow-y:auto;padding:0 1.5rem max(1.5rem,env(safe-area-inset-bottom));border-top:3px solid var(--teal)}
+.mnav{display:none;position:fixed;inset:0;z-index:10000;background:#fff;flex-direction:column;overflow-y:auto;padding:0 1.5rem max(1.5rem,env(safe-area-inset-bottom));border-top:3px solid var(--teal)}
 .mnav.open{display:flex}
 .mn-top{display:flex;align-items:center;justify-content:space-between;height:64px;flex-shrink:0;border-bottom:1px solid var(--border)}
 .mn-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
