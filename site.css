@@ -620,3 +620,5 @@ footer.ft{display:block;background:var(--navy);padding:3.5rem 3rem 1.75rem;text-
   .pp-signs li:nth-child(n+5){display:none}
 }
 .team-avatar img[src^="team-"],.ts-ph img{object-position:center center!important;transform:none!important}
+@media(max-width:600px){.hero-eyebrow{font-size:.54rem;letter-spacing:.1em;white-space:nowrap;gap:.5rem}.hero-eyebrow::before{width:1rem;flex:0 0 1rem}}
+@media(max-width:370px){.hero-eyebrow{font-size:.5rem;letter-spacing:.06em}}
